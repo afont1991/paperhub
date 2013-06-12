@@ -1,0 +1,37 @@
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
+
+
+{{ asset:js file="theme::bootstrap.min.js" group="default" }}
+{{ asset:js file="theme::jquery/number.js" group="default" }}
+{{ asset:js file="theme::jquery/tagsinput.js" group="default" }}
+{{ asset:js file="theme::jquery/placeholder.js" group="default" }}
+{{ asset:js file="theme::jquery/dropkick.js" group="default" }}
+{{ asset:js file="theme::app.js" group="default" }}
+{{ asset:js file="theme::cthulu.js" group="default" }}
+
+{{ asset:render_js group="default" }}
+{{ asset:render_js group="modules" }}
+
+
+<!-- {{ theme:js file="bootstrap.min.js" }}
+
+{{ theme:js file="jquery/number.js" }}
+{{ theme:js file="jquery/tagsinput.js" }}
+{{ theme:js file="jquery/placeholder.js" }}
+{{ theme:js file="jquery/dropkick.js" }}
+
+{{ theme:js file="app.js" }}
+{{ theme:js file="cthulu.js" }} -->
+
+<?php //echo Asset::render_js(); ?>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        {{ widgets:area slug="footer" }}
+      </div>
+    </div>
+  </div>
+</footer>

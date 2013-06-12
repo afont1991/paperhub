@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>{{ settings:site_name }} &raquo; {{ template:title }}</title>
+
+  <!-- Included CSS Files -->
+  {{ theme:partial name="css" }}
+  {{ theme:css file="home.css" }}
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+    <!-- WRAPPER -->
+  <div class="wrapper home-container">
+    <!-- HEADER  -->
+    <header>
+      {{ theme:partial name="_navbar" }}
+    </header>
+    <div class="showcase">
+      <div class="container">
+        <div class="row">
+          <div class="span8 offset2">
+            <h1>Advanced Exchange Platform</h1><br /><br />
+            <div id="myCarousel" class="carousel slide" data-interval="2500">
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                  <div class="active item">
+                    {{ hero_image:img }}
+                  </div>
+<!--                   <div class="item">
+                    {{ theme:image file="home/bitcoin-gold.png" alt="Bitcoins" }}
+                  </div> -->
+                </div>
+                <!-- Carousel nav -->
+<!--                 <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a> -->
+            </div>
+            <p>
+              Bitcoin, Litecoin, Namecoin, PPCoin <strong> and </strong>USD, EUR, CAD, JPY, GBP
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="strip">
+      <div class="container">
+        <div class="row">
+          <p>
+            <strong>Interested in joining the future?</strong>
+            Register now to be added to our beta launch.
+            <a class="btn btn-primary btn-small" href="/register">CREATE FREE ACCOUNT</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <ul class="thumbnails">
+            <li class="span3">
+              <div class="thumbnail">
+                {{ theme:image file="home/calculator.png" alt="No Fees" }}
+                <h4>No fees</h4>
+                <p>
+                  {{ settings:site_name }} charges no fees to trade.Trade as much as you like while keeping all you earn. We utilize several other exchanges, so we
+                  earn our fee from the spread.
+                </p>
+                <p>
+                  No longer do you have to calculate your profit after a trade. With us, the price you see, is the
+                  price you get.
+                </p>
+              </div>
+            </li>
+            <li class="span3">
+              <div class="thumbnail">
+                {{ theme:image file="home/multiple-exchanges.png" alt="Multiple Exchanges" }}
+                <h4>Full Market Access</h4>
+                <p>
+                  By working across several top exchanges,
+                  we have access to the <strong>best</strong> bid and
+                  ask rates. Expect the best charting, the best spreads, the best execution and the least lag.
+                </p>
+                <p>
+                  We love all sorts of cryptocurrencies. <strong>Bitcoin</strong>, <strong>Litecoin</strong>, <strong>Namecoin</strong>, <strong>PPCoin</strong>? Yes.
+                </p>
+              </div>
+            </li>
+
+            <li class="span3">
+              <div class="thumbnail">
+                {{ theme:image file="home/security.png" alt="Security Matters" }}
+                <h4>Security Matters</h4>
+                <p>
+                  <strong>Cold storage</strong>? Yup. <strong>Redundancy?</strong> Yup. <strong>Security</strong>?
+                  Yup. We make security a top priority. We have a dedicated team working to keep all funds safe and secure 24/7
+                </p>
+              </div>
+            </li>
+
+            <li class="span3">
+              <div class="thumbnail">
+                {{ theme:image file="home/tools.png" alt="Professional Tools" }}
+                <h4>Pro Tools</h4>
+                <p>
+                  Trade professionally with
+                  <ul>
+                    <li>Stop Losses</li>
+                    <li>Short and Long Positions</li>
+                    <li>Market and Limit Orders</li>
+                    <li>Take Profit</li>
+                    <li>Margin Trading</li>
+                  </ul>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h2><span>Designed for professional traders</span></h2>
+      <h4>Made by these guys</h4>
+      <div class="row">
+        <div class="span6">
+          <p>
+            <img class="pull-left avatar" src="https://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( "emailshamoon@gmail.com " ) ) );; ?>" alt="Shamoon Siddiqui">
+            <strong>Shamoon Siddiqui</strong>
+            <br />
+            CEO of develop.io, active bitcoin trader, and founder of the NYC Bitcoin Meetup, Shamoon is a serial entrepreneur that masterminded the tools that make Crypto Street indispensable to cryptocurrency traders.
+            <div class="clearfix"></div>
+          </p>
+        </div>
+        <div class="span6">
+          <p>
+            <img class="pull-left avatar" src="https://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( "font@crypto.st" ) ) );; ?>" alt="Andrew Font">
+            <strong>Andrew Font</strong>
+            <br />
+            A risk taking entrepreneurial spirit with a knack for programing, Andrew is a cryptocurrency evengelist bitcoin trader, who brings a wealth of knowledge and experience to Crypto Street.
+            <div class="clearfix"></div>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span6">
+          <p>
+            <img class="pull-left avatar" src="https://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( "gb@geoburke.com " ) ) );; ?>" alt="George Burke">
+            <strong>George Burke</strong>
+            <br />
+            Founder of 3 direct-to-consumer startups, George’s marketing and customer acquisition skills fill the doors with traders. George has multiple ventures under his belt, the first of which he started with Shamoon.
+            <div class="clearfix"></div>
+          </p>
+        </div>
+        <div class="span6">
+          <p>
+            <img class="pull-left avatar" src="https://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( "yaniv@crypto.st" ) ) );; ?>" alt="Yaniv Sofer">
+            <strong>Yaniv Sofer</strong>
+            <br />
+            Creative problem solver and avid entrepreneur with vast multidisciplinary knowledge. Yaniv has a great passion for physics and mathematics and has used those skills in building complex behavior modeling.
+            <div class="clearfix"></div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ theme:partial name="scripts" }}
+</body>
+</html>

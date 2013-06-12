@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>{{ settings:site_name }} &raquo; {{ template:title }}</title>
+
+  <!-- Included CSS Files -->
+  {{ theme:partial name="css" }}
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+    <!-- WRAPPER -->
+  <div class="wrapper">
+    <!-- HEADER  -->
+    <header>
+      {{ theme:partial name="_navbar" }}
+    </header>
+
+
+    <div class="contact-container container">
+      <h2><span>Contact Us</span></h2>
+      <?php $success_string = $this->session->flashdata('success'); ?>
+      <?php if ( ! empty($success_string)):?>
+        <div class="alert alert-success">
+          <?php echo $success_string;?>
+        </div>
+      <?php endif;?>
+      <?php if ( ! empty($error_string)):?>
+        <div class="alert alert-error">
+          <?php echo $error_string;?>
+        </div>
+      <?php endif;?>
+      <div class="row-fluid">
+        <div class="span6">
+          <p>
+            Please fill out the form below to get in touch with us. Our team is always ready
+            to assist with whatever needs you may have. Fill out the form below for 
+            <ul>
+              <li>Press Inquiries</li>
+              <li>Investor Opportunities</li>
+              <li>General Questions</li>
+              <li>Just to talk</li>
+            </ul>
+          </p>
+          <form class="form-horizontal" action="/contact" method="POST">
+            <div class="control-group">
+              <label class="control-label" for="inputName">Name</label>
+              <div class="controls">
+                <input type="text" id="inputName" placeholder="Name" name="name" class="span12">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="inputEmail">Email</label>
+              <div class="controls">
+                <input type="text" id="inputEmail" placeholder="Email" name="email" class="span12">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="inputMessage">Message</label>
+              <div class="controls">
+                <textarea class="span12" id="contact_message" rows="10" cols="50" name="message" ></textarea>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <?php echo form_input('d0ntf1llth1s1n', ' ', 'class="default-form" style="display:none"') ?>
+                <?php echo form_input('contact-submit', 'Send', 'class="default-form" style="display:none"') ?>
+                <?php echo form_input('subject', 'Inquiry', 'class="default-form" style="display:none"') ?>
+                <button type="submit" class="btn">Send</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="span6">
+          {{ theme:image file="nouns/speech-bubbles.png" alt="Talk To Us" }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ theme:partial name="scripts" }}
+</body>
+</html>
