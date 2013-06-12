@@ -70,7 +70,7 @@ $db[PYRO_STAGING] = array(
 
 // Production
 $db[PYRO_PRODUCTION] = array(
-	'hostname'		=> 	'127.0.0.1',
+	'hostname'		=> 	'tunnel.pagodabox.com',
 	'username'		=> 	'gilda',
 	'password'		=> 	'lDUR1qSx',
 	'database'		=> 	'paperhub',
@@ -80,7 +80,7 @@ $db[PYRO_PRODUCTION] = array(
 	'cache_on' 		=>	FALSE,
 	'char_set' 		=>	'utf8',
 	'dbcollat' 		=>	'utf8_unicode_ci',
-	'port' 	 		=>	'3307',
+	'port' 	 		=>	'3306',
 );
 
 
