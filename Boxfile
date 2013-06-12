@@ -8,3 +8,4 @@ web1: #component type & number
     - mysql
     - gd
     - curl
+    - mysqli
